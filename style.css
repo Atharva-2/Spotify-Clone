@@ -13,7 +13,6 @@ body {
 
 .left {
   width: 25vw;
-  padding: 10px;
 }
 
 .home ul li {
@@ -29,7 +28,6 @@ body {
 .heading {
   display: flex;
   gap: 15px;
-  /* padding-top: 14px; */
   padding: 23px 14px;
   font-weight: bold;
   align-items: center;
@@ -54,6 +52,7 @@ body {
   font-size: 10px;
   position: absolute;
   bottom: 0;
+  padding-bottom: 15px;
 }
 
 .footer a {
@@ -63,4 +62,76 @@ body {
 
 .right {
   width: 75vw;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  margin-bottom: 10px;
+}
+
+.header > * {
+  padding: 20px;
+}
+
+.header #signup{
+  background: none;
+  color: grey;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.header #login{
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 25px;
+  border-radius: 40px;
+}
+
+.btns{
+  display: flex;
+  gap: 20px;
+}
+
+.spotifyPlaylist{
+  padding: 16px;
+  background-image: linear-gradient(#1e1e1e, #121212);
+  margin: 0;
+}
+
+.cardContainer{
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card{
+  width: 250px;
+  height: 400px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #252525;
+  font-size: 16px;
+}
+
+.card p{
+  color: grey;
+  font-size: 14px;
+
+}
+
+.card > *{
+  padding-top: 10px;
+}
+
+.card img{
+  width: 100%;
+  border-radius: 5px;
+  object-fit: contain;
 }
