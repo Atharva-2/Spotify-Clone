@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  --a: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -174,9 +178,14 @@ body {
   height: 400px;
   padding: 10px;
   border-radius: 5px;
-  background-color: #252525;
   font-size: 16px;
   position: relative;
+  transition: all 0.5s;
+}
+
+.card:hover {
+  background-color: #252525;
+  --a: 1;
 }
 
 .card p {
@@ -211,6 +220,8 @@ body {
   position: absolute;
   top: 215px;
   right: 17px;
+  opacity: var(--a);
+  transition: all 0.4s ease-in-out;
 }
 
 .displaybar {
@@ -220,7 +231,7 @@ body {
   margin-top: 5px;
 }
 
-.displaybar .songinfo{
+.displaybar .songinfo {
   width: 250px;
 }
 
@@ -277,11 +288,29 @@ body {
   display: none;
 }
 
-.displaybar .songtime{
+.displaybar .songtime {
   width: 120px;
 }
 
+.volume {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.timevol {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  padding-right: 10px;
+}
+
 @media (max-width: 1250px) {
+  .songList ul li {
+    word-wrap: break-all;
+  }
+
   .left {
     background-color: black;
     position: absolute;
@@ -323,8 +352,23 @@ body {
 }
 
 @media (max-width: 900px) {
+  .displaybar {
+    margin-bottom: 10px;
+  }
+
   .seekbar {
     width: 96%;
+  }
+
+  .timevol {
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .playbar {
+    height: auto;
   }
 }
 
@@ -356,22 +400,18 @@ body {
     top: 265px;
   }
 
-  .playbar{
-    height: 105px;
-  }
-
-  .displaybar{
+  .displaybar {
     display: flex;
     flex-direction: column;
     gap: 7px;
-    margin-bottom: 10px ;
+    margin-bottom: 10px;
   }
 
-  .displaybar .songinfo{
+  .displaybar .songinfo {
     width: auto;
   }
 
-  .displaybar .songtime{
+  .displaybar .songtime {
     width: auto;
   }
 }
